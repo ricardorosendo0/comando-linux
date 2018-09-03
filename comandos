@@ -8,8 +8,8 @@ Lista de comandos mas utilizado:
 6. sudo fdisk -l -- donde esta montado la usb
 7. wget -- Comando para enviar una data de un sitio a otro por consola
 8. ssh-keygen -- crear llaves tanto puvlicaca como privadas
-9. ssh -o IdentitiesOnly=yes -i public.pem   problemasd de autenticacion con usuarios
- 
+9. ssh -o IdentitiesOnly=yes -i public.pem  -- problemasd de autenticacion con usuarios
+10. sudo chown www-data:www-data -R html -- si cambiar usuario y grupo de directorio en caso de presentar problemas con usuario
 
 Cat (de concatenar), es una maravillosa utilidad que nos permite visualizar el contenido de un archivo de texto sin la necesidad de un editor. Para utilizarlo solo debemos mencionarlo junto al archivo que deseamos visualizar:
 
