@@ -11,6 +11,30 @@ Lista de comandos mas utilizado:
 9. ssh -o IdentitiesOnly=yes -i public.pem  -- problemasd de autenticacion con usuarios
 10. sudo chown www-data:www-data -R html -- si cambiar usuario y grupo de directorio en caso de presentar problemas con usuario
 11.  HTOP administra interactivamente los procesos del sistema: sudo apt-get install htop
+12. Crear SWAP: 
+#inicio#
+
+#SABER ESPARCIO DE DISCO#
+df -h
+#CREAR EL ARCHIVO DE LA SWAP#
+fallocate -l 4G /swap    
+#CAMBIAR LOS PERMISOS# 
+chmod 0600 swap 
+#CREAR LA SWAP#
+mkswap swap     
+#MONTAR LA SWAP#
+swap on     
+# culmina #
+#PROCESO COMPLETO SIN COMENTARIOS#
+
+df -h
+fallocate -l 4G /swap
+ls -lh
+chmod 0600 swap
+mkswap swap
+swap on
+
+#END#
 
 Cat (de concatenar), es una maravillosa utilidad que nos permite visualizar el contenido de un archivo de texto sin la necesidad de un editor. Para utilizarlo solo debemos mencionarlo junto al archivo que deseamos visualizar:
 
