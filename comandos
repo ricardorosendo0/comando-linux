@@ -23,7 +23,7 @@ chmod 0600 swap
 #CREAR LA SWAP#
 mkswap swap     
 #MONTAR LA SWAP#
-swap on     
+swapon swap
 # culmina #
 #PROCESO COMPLETO SIN COMENTARIOS#
 
@@ -32,7 +32,7 @@ fallocate -l 4G /swap
 ls -lh
 chmod 0600 swap
 mkswap swap
-swap on
+swapon swap
 
 #END#
 
