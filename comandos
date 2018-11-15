@@ -27,6 +27,19 @@ swapon swap
 # culmina #
 #PROCESO COMPLETO SIN COMENTARIOS#
 
+#Cambiar Zona horaria#
+cd /etc/
+Realizamos una copia de seguridad del fichero, como siempre, por si acaso…
+sudo cp /etc/localtime /etc/localtime-old
+Y ahora tendremos que ver qué regiones hay en el directorio /usr/share/zoneinfo/ con un
+ls -la /usr/share/zoneinfo/
+Para elegir la que más nos convenga en cada momento. De hecho hay directorios especiales para ciertas regiones como Europa (mi caso), así que yo añadiría eso a la ruta y haría un
+ls -la /usr/share/zoneinfo/America/
+Por ejemplo,
+ln -sf /usr/share/zoneinfo/America/Bogota locatime  <-- en resumen este es el comando a utilizar para cambiar tu zona horaria, lo que estas crean es un enlace simbolico
+#end#
+
+
 df -h
 fallocate -l 4G /swap
 ls -lh
