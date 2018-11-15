@@ -27,7 +27,10 @@ swapon swap
 # culmina #
 #PROCESO COMPLETO SIN COMENTARIOS#
 
-#Cambiar Zona horaria#
+#CAMBIAR ZONA HORARIA#
+#Metodo 01#
+timedatectl set-timezone America/Bogota
+#Metodo 02#
 cd /etc/
 Realizamos una copia de seguridad del fichero, como siempre, por si acaso…
 sudo cp /etc/localtime /etc/localtime-old
@@ -36,7 +39,8 @@ ls -la /usr/share/zoneinfo/
 Para elegir la que más nos convenga en cada momento. De hecho hay directorios especiales para ciertas regiones como Europa (mi caso), así que yo añadiría eso a la ruta y haría un
 ls -la /usr/share/zoneinfo/America/
 Por ejemplo,
-ln -sf /usr/share/zoneinfo/America/Bogota locatime  <-- en resumen este es el comando a utilizar para cambiar tu zona horaria, lo que estas crean es un enlace simbolico
+ln -sf /usr/share/zoneinfo/America/Bogota locatime  <-- en resumen este es el comando a utilizar para cambiar tu zona horaria, 
+estas crean es un enlace simbolico
 #end#
 
 
