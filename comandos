@@ -1,4 +1,4 @@
-Lista de comandos mas utilizado:
+# Lista de comandos mas utilizado:#
 
 1. sudo dmidecode --type memory  detalles de memoria
 2. apt-get udapte actualizacion de sistema
