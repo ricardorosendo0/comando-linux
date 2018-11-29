@@ -13,7 +13,6 @@
 11.  HTOP administra interactivamente los procesos del sistema: sudo apt-get install htop
 12. Crear SWAP: 
 #inicio#
-
 #SABER ESPARCIO DE DISCO#
 df -h
 #CREAR EL ARCHIVO DE LA SWAP#
@@ -25,7 +24,6 @@ mkswap swap
 #MONTAR LA SWAP#
 swapon swap
 # culmina #
-#PROCESO COMPLETO SIN COMENTARIOS#
 
 #CAMBIAR ZONA HORARIA#
 #Metodo 01#
@@ -42,16 +40,26 @@ Por ejemplo,
 ln -sf /usr/share/zoneinfo/America/Bogota locatime  <-- en resumen este es el comando a utilizar para cambiar tu zona horaria, 
 estas crean es un enlace simbolico
 #end#
-
-
 df -h
 fallocate -l 4G /swap
 ls -lh
 chmod 0600 swap
 mkswap swap
 swapon swap
-
 #END#
+
+#MSQL#
+mysql -u root -p
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'pasw';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost';
+mysql -u user -p
+CREATE DATABASE nueva_db;
+
+#Importar db#
+msql -u -p
+user datebase
+sorurce /dirct...
+
 
 Cat (de concatenar), es una maravillosa utilidad que nos permite visualizar el contenido de un archivo de texto sin la necesidad de un editor. Para utilizarlo solo debemos mencionarlo junto al archivo que deseamos visualizar:
 
