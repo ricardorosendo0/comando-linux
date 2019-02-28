@@ -66,6 +66,11 @@ msql -u -p
 user datebase
 sorurce /dirct...
 
+#Redireccionamiento por medeio de htacces
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RedirectMatch 301 ^/?$ http://magnets-badges-doming.com/
+</IfModule>
 
 Cat (de concatenar), es una maravillosa utilidad que nos permite visualizar el contenido de un archivo de texto sin la necesidad de un editor. Para utilizarlo solo debemos mencionarlo junto al archivo que deseamos visualizar:
 
