@@ -72,6 +72,15 @@ RewriteEngine on
 RedirectMatch 301 ^/?$ http://magnets-badges-doming.com/
 </IfModule>
 
+#Utilizar tmux 
+sudo apt-get install tmux
+Usamos el comando tmux para iniciarlo
+Una vez iniciado podemos usar el comando CTRL + B y la opción que queramos,
+CTRL + B y c abre una nueva terminal
+CTRL + B y n avanza a la siguiente terminal
+CTRL + B y d Desconecta la sesión
+tmux attach Conectarse a la sesión de tmux
+
 Cat (de concatenar), es una maravillosa utilidad que nos permite visualizar el contenido de un archivo de texto sin la necesidad de un editor. Para utilizarlo solo debemos mencionarlo junto al archivo que deseamos visualizar:
 
 $ cat prueba.txt
