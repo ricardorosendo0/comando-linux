@@ -8,7 +8,9 @@
 6. sudo fdisk -l -- donde esta montado la usb
 7. wget -- Comando para enviar una data de un sitio a otro por consola
 8. ssh-keygen -- crear llaves tanto puvlicaca como privadas
+8.1 ssh-keygen -t rsa -b 4096 -C name@mail.com -- Permite generar una llave ssh tipo rsa
 9. ssh -o IdentitiesOnly=yes -i public.pem  -- problemasd de autenticacion con usuarios
+9.1 ssh-copy-id -i llave.pub name@ipserver -- envia una copia de la llave ssh "pública" a un servidor (ubicado en dicha IP)
 10. sudo chown www-data:www-data -R html -- si cambiar usuario y grupo de directorio en caso de presentar problemas con usuario
 11.  HTOP administra interactivamente los procesos del sistema: sudo apt-get install htop
 12. nginx error 404 en directorio:
