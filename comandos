@@ -4,6 +4,13 @@
 2. apt-get udapte actualizacion de sistema
 3. rm -r borra el directorio y lo que esta dentro
 4. unzip descomprime un archivo
+4.1 
+#Empaquetar
+tar cvf [directorio de salida] [carpeta a empaquetar]
+#Comprimir
+gzip -9r [archivo a comprimir]
+
+
 5. qemu-system-x86_64 /dev/sdb1 -- correr desde el emulador la memoria
 6. sudo fdisk -l -- donde esta montado la usb
 7. wget -- Comando para enviar una data de un sitio a otro por consola
