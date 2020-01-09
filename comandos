@@ -78,8 +78,28 @@ sorurce /dirct...
 #Redireccionamiento por medeio de htacces
 <IfModule mod_rewrite.c>
 RewriteEngine on
-RedirectMatch 301 ^/?$ http://magnets-badges-doming.com/
+RedirectMatch 301 ^/?$ http://dominio.com/
 </IfModule>
+
+
+#Instalar postfix mail 
+sudo apt-get install postfix
+
+#Let’s start Postfix configuration. 
+#Edit Postfix configuration file /etc/postfix/main.cf 
+#in your favourite editor and make following changes. Change myhostname, mydomain as per your requirements.
+  myhostname = host.tecadmin.net
+  mydomain = tecadmin.net
+  myorigin = $mydomain
+  mydestination = $myhostname, localhost, $mydomain, localhost.localdomain
+  mynetworks = 127.0.0.0/8, /32
+  relay_domains = $mydestination
+  inet_interfaces = all
+  inet_protocols = all
+  home_mailbox = Maildir/
+
+sudo service postfix restart
+
 
 #Utilizar tmux 
 sudo apt-get install tmux
