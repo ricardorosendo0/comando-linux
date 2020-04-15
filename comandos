@@ -10,6 +10,7 @@ tar cvf [directorio de salida] [carpeta a empaquetar]
 #Comprimir
 gzip -9r [archivo a comprimir]
 
+5.0 Actualizar ssl certbot: sudo certbot renew
 
 5. qemu-system-x86_64 /dev/sdb1 -- correr desde el emulador la memoria
 6. sudo fdisk -l -- donde esta montado la usb
