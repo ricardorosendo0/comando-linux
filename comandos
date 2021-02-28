@@ -72,9 +72,8 @@ mysql -u user -p
 CREATE DATABASE nueva_db;
 
 #Importar db#
-msql -u -p
-user datebase
-sorurce /dirct...
+mysql -u usuario -p basededatos
+source /directorio completo
 
 #Redireccionamiento por medeio de htacces
 <IfModule mod_rewrite.c>
