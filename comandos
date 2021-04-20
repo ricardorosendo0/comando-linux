@@ -88,15 +88,26 @@ sudo apt-get install postfix
 #Let’s start Postfix configuration. 
 #Edit Postfix configuration file /etc/postfix/main.cf 
 #in your favourite editor and make following changes. Change myhostname, mydomain as per your requirements.
-  myhostname = host.tecadmin.net
-  mydomain = tecadmin.net
-  myorigin = $mydomain
-  mydestination = $myhostname, localhost, $mydomain, localhost.localdomain
-  mynetworks = 127.0.0.0/8, /32
-  relay_domains = $mydestination
-  inet_interfaces = all
-  inet_protocols = all
-  home_mailbox = Maildir/
+smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
+myhostname = mail.mi-dominio.com
+mydomain = mi-dominio.com
+myorigin = $mydomain
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+mydestination = $myhostname, localhost, $mydomain, localhost.localdomain
+relay_domains = $mydestination
+mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+mailbox_size_limit = 0
+recipient_delimiter = +
+inet_interfaces = all
+inet_protocols = all
+home_mailbox = Maildir/
+
+comandos:
+sudo systemctl start postfix
+sudo systemctl enable postfix
+sudo systemctl reload postfix
+sudo systemctl status postfix
 
 sudo service postfix restart
 
