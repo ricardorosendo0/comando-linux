@@ -72,8 +72,8 @@ mysql -u user -p
 CREATE DATABASE nueva_db;
 
 #Importar db#
-mysql -u usuario -p basededatos
-source /directorio completo
+exportar: mysqldump -u nombre_usuario -p nombre_base_datos > Archivo.sql
+importar: mysql -u nombre_usuario -p nombre_base_datos < Archivo.sql
 
 #Redireccionamiento por medeio de htacces
 <IfModule mod_rewrite.c>
