@@ -27,6 +27,10 @@ gzip -9r [archivo a comprimir]
                 try_files $uri $uri/ /web/index.php?$args;
                 }
 
+12.1 Instalar buscador y hacer busqueda:
+Instalar con:     sudo apt install mlocate
+Realizar busqueda: locate PalabraClave
+
 12. Crear SWAP: 
 #inicio#
 #SABER ESPARCIO DE DISCO#
