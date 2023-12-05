@@ -12,7 +12,17 @@ gzip -9r [archivo a comprimir]
 
 5.0 Actualizar ssl certbot: sudo certbot renew
 
-5. qemu-system-x86_64 /dev/sdb1 -- correr desde el emulador la memoria
+5.1 Cambiar archivos y directorios de manera recursiva
+sudo find /var/www/html -type d -exec chmod 755 {} \;
+sudo find /var/www/html -type f -exec chmod 644 {} \;
+
+Cuando se usa find con -exec, el chmod se ejecuta para cada elemento encontrado. Utilice el xargs para acelerar la operación pasando varias entradas al mismo tiempo:
+
+find /var/www/html -type d -print0 | xargs -0 chmod 755
+find /var/www/html -type f -print0 | xargs -0 chmod 644
+
+
+5.2 qemu-system-x86_64 /dev/sdb1 -- correr desde el emulador la memoria
 6. sudo fdisk -l -- donde esta montado la usb
 7. wget -- Comando para enviar una data de un sitio a otro por consola
 8. ssh-keygen -- crear llaves tanto puvlicaca como privadas
